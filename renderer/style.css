@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  width: 160px;
+  height: 160px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+#pet-canvas {
+  display: block;
+  width: 160px;
+  height: 160px;
+  background: transparent !important;
+  cursor: grab;
+}
+
+#pet-canvas:active, #pet-canvas.grabbing {
+  cursor: grabbing;
+}
