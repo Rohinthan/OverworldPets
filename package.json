@@ -1,0 +1,68 @@
+{
+  "name": "desktop-pet",
+  "version": "1.0.0",
+  "description": "Cross-platform desktop mascot companion",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "build": "electron-builder",
+    "build:linux": "electron-builder --linux",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
+  },
+  "keywords": [
+    "desktop-pet",
+    "electron",
+    "pixel-art",
+    "companion"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "auto-launch": "^5.0.6",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.desktoppet.app",
+    "productName": "DesktopPet",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.entertainment",
+      "target": [
+        "dmg"
+      ],
+      "icon": "assets/icon.png"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "assets/icon.png"
+    }
+  }
+}

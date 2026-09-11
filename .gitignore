@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build outputs & packaging
+dist/
+build/
+*.AppImage
+*.deb
+*.rpm
+*.exe
+*.dmg
+
+# User custom audio (kept local for copyright compliance)
+assets/sounds/*.mp3
+assets/sounds/*.wav
+assets/sounds/*.ogg
+!assets/sounds/README.md
+
+# Temporary screenshots & reference images
+*.png
+*.jpeg
+*.jpg
+!assets/icon.png
+!assets/tray-icon.png
+desktop_buddy.html
+SKILL.md
+ghast image/
+
+# Logs & Environment
+*.log
+.env
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
